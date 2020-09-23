@@ -9,11 +9,11 @@ class Song < ActiveRecord::Base
   def drake_made_this
     if Artist.exist?(name: "Drake")
       drake_song = Artist.find_by(name: "Drake")
-    else 
+    else
       drake_song = Artist.create(name: "Drake")
-    end 
+    end
     self.artist = drake_song
-  end 
+  end
 
     # when this method is called it should assign the song's artist to Drake
     # Drake doesn't exist in the database as an artist yet, so you'll have to create a record
